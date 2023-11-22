@@ -67,18 +67,17 @@
 
     </section>
 
-    <section class="aboutme-container" id="aboutme">
+    <section class="pens-container" id="Pens">
 
-        <div class="aboutme-content">
+        <div class="pens-content">
 
-            <img src="/img/IMG_2211.JPG" alt="Profile Photo" class="aboutme-photo">
+            <img src="/img/IMG_0588.JPEG" alt="Profile Photo" class="pens" style="
+            width: 350px;
+            height: 400px;">
 
-            <h2>About Me</h2>
+            <h2>Pens</h2>
 
-            <p>My woodturning starting about 5 years ago. I was drawn into videos on Youtube at first. My Dad took
-                notice, and bought me an 18 inch lathe for Christmas. My first turn was a log from a spruce tree that
-                became a bowl. From there, I focus on tool attachments for the lathe. Once I had a pen mandrel, my
-                project ideas expanded. After dust collection was installed, I've now added resin work to my hobby. </p>
+            <p>This section is dedicated to penturning that I've done. </p>
 
         </div>
 
@@ -86,6 +85,36 @@
 
     <section class="projects-container" id="projects">
 
+        <p> This is the process before turning.</p>
+
+        <div class="scroll-container">
+            <img src="img/IMG_1182.JPG" alt="Pen Blank" style="
+            width: 300px;
+            height: 350px;">
+            <img src="img/IMG_1183.JPG" alt="Nib color" style="
+            width: 300px;
+            height: 350px;">
+            <img src="img/IMG_1184.JPG" alt="Spacer" style="
+            width: 300px;
+            height: 350px;">
+            <img src="img/IMG_1186.JPEG" alt="Cut to size" style="
+            width: 300px;
+            height: 350px;">
+            <img src="img/IMG_1187.JPEG" alt="Drill" style="
+            width: 300px;
+            height: 350px;">
+            <img src="img/IMG_1188.JPEG" alt="Epoxy" style="
+            width: 300px;
+            height: 350px;">
+            <img src="img/IMG_1189.JPEG" alt="Bore to Brass" style="
+            width: 300px;
+            height: 350px;">
+            <img src="img/IMG_1190.JPEG" alt="Ready to turn" style="
+            width: 300px;
+            height: 350px;">
+          </div>  
+          <div><img src="" alt="description of your GIF" width="400" height="300">
+          </div>
         <article class="projects-item">
 
             <h3>Pen Projects</h3>
@@ -133,23 +162,23 @@
                     function getQuote() {
                         // Make a GET request to the API
                         fetch('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
-                            
-                        .then(response => response.json())
-                            
-                        .then(data => {
+
+                            .then(response => response.json())
+
+                            .then(data => {
                                 // Update the content of the 'quote' paragraph with the received quote
-                                
+
                                 document.getElementById('quote').textContent = data[0];
-                            
+
                             })
-                            
+
                             .catch(error => {
-                                
+
                                 console.error('Error fetching quote:', error);
-                            
+
                             });
-                    
-                        } 
+
+                    } 
                 </script>
 
         </footer>

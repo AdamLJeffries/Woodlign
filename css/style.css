@@ -4,7 +4,7 @@ NORMALIZE normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
 =============================================================================
 */
 
-html{line-height:1.15;text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-animation:none}::-webkit-file-upload-button{-webkit-animation:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+html{line-height:1.15;text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:inherit}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted button text}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-animation:none}::-webkit-file-upload-button{-webkit-animation:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 
 /* 	
 =============================================================================
@@ -84,17 +84,45 @@ body {
     align-items: center;
     padding: 12px;
 }
-
-.projects-container {
-    background: #65658f;
+.pens-container {
+    background: #29326a;
     display: flex;
-    flex-flow: row wrap;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     padding: 48px 0;
 }
 
-.projects-content {
+.pens-content {
+    color: #F1F1F1;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+div.scroll-container {
+    background-color: #1a5190;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+  }
+  
+.projects-container {
+    background: url(https://images.custommade.com/rpexcnWv1sHWkbqIYBjOJCTfMWk=/custommade-photosets/00a8eb94ae63321_056a1961.jpg) center center no-repeat;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content:center ;
+    align-items: center;
+    padding: 60px 0;
+}
+
+/* .projects-content {
     color: #b35f5f;
     width: 100%;
     max-width: 1000px;
@@ -103,12 +131,10 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 12px;
-}
+} */
 
 .projects-item {
-    color: #f32e2e;
-    width: 100%;
-    max-width: 1000px;
+    color: #f1f1f1e0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -126,19 +152,26 @@ body {
 
 .footer-container {
     background: #1b1b27;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content:center ;
     align-items: center;
-    padding: 8px 0;
+    padding: 60px 0;
 }
 
 .footer-content {
     font-size: 13px;
     color: #F1F1F1;
+    display:grid;
+    grid-template-columns:max-content;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b27;
     width: 100%;
-    max-width: 1000px;
     text-align: center;
+    padding: 8px 0;
 }
+
 
 /* Links and Link Buttons
 ========================================================================== */
@@ -147,13 +180,13 @@ a {
 }
 
 a:visited {
-    font-size: 13px;
-    color: #F1F1F1;
+    font-size: 24px;
+    color: #eae4e4;
     width: 100%;
     max-width: 1000px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 12px;
     
@@ -302,6 +335,8 @@ section h4 {
 section p {
     font-family: 'Cabin', sans-serif;
     line-height: 1.5;
+    color: #F1F1F1;
+    font-size: 18px;
 }
 
 
@@ -364,11 +399,11 @@ footer {
 
 @media only screen and (min-width: 768px) {
 	
-    .projects-content {
+    /* .projects-content {
         flex-direction: row;
         justify-content: center;
         align-items: space;
-    }
+    } */
 
     .main-nav {
         display: block;
