@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="US">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Woodlign Turning Co.</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="js/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <section class="header-container">
+
+        <header class="header-content">
+
+            <div class="main-logo">
+
+                <span>Misc</span>
+
+            </div>
+
+            <nav class="main-nav">
+
+                <ul id="navigation">
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="stock.html">Stock</a></li>
+                </ul>
+
+            </nav>
+
+            <nav class="mobile-nav">
+
+                <span><a href="#">☰</a></span>
+
+            </nav>
+
+
+        </header>
+
+    </section>
+
+
+    <section class="hero-container" id="hero">
+
+        <div class="hero-content">
+
+            <h1>Woodlign Turning Co. Founded 2023</h1>
+
+            <p>A site dedicated to woodturning projects for art enthusiast.</p>
+
+            <a href="#aboutme" class="btn">Learn More About Me</a>
+
+        </div>
+
+    </section>
+
+    <section class="pens-container" id="Pens">
+
+        <div class="pens-content">
+
+            <img src="/img/IMG_1641.JPEG" alt="Profile Photo" class="pens" style="
+            width: 220px;
+            height: 500px;">
+
+            <h2>Misc</h2>
+
+            <p>This section is dedicated to other woodturning that I've done. </p>
+
+        </div>
+
+    </section>
+
+    <section class="projects-container" id="projects">
+
+        <p>Here's my work</p>
+
+          <div class="grid">
+            <img src="img/IMG_0625.JPEG" alt="Finished" style="
+            width: 225px;
+            height: 350px;">
+            <img src="img/IMG_0669.JPEG" alt="Finished" style="
+            width: 225px;
+            height: 350px;">
+            <img src="img/IMG_0696.JPEG" alt="Finished" style="
+            width: 225px;
+            height: 350px;">
+            <img src="img/IMG_0710.JPEG" alt="Finished" style="
+            width: 225px;
+            height: 350px;">
+            <img src="img/IMG_0733.JPEG" alt="Finished" style="
+            width: 225px;
+            height: 350px;">
+            <img src="img/IMG_0562.JPG" alt="Finished" style="
+            width: 225px;
+            height: 350px;">
+            <img src="img/IMG_1647.JPEG" alt="Finished" style="
+            width: 225px;
+            height: 350px;">
+            <img src="img/IMG_1655.JPEG" alt="Finished" style="
+            width: 225px;
+            height: 350px;">
+            <img src="img/IMG_1037.JPEG" alt="Finished" style="
+            width: 225px;
+            height: 350px;">
+        </div>  
+          <style>
+            .grid {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              justify-content:center;
+              align-items:center;
+              justify-items: center;
+              grid-gap: 10px;
+            }
+        
+            .grid img {
+              width: 100%;
+            }
+        
+          </style>
+        
+        <article class="projects-item">
+
+            <h3>Pen Projects</h3>
+
+            <p>Projects that are Pens. All pens all the time.</p>
+
+            <p><a href="pens.html" class="btn">Click Here &raquo;</a></p>
+
+        </article>
+
+
+        <article class="projects-item">
+
+            <h3>Special Projects</h3>
+
+            <p>Special projects that I took on with no experience. </p>
+
+            <p><a href="#" class="btn">Click Here &raquo;</a></p>
+
+        </article>
+
+    </section>
+
+    <section>
+
+        <footer class="footer-content">
+
+            <h4>Ron Swanson Quotes</h4>
+
+            <p id="quote"></p>
+
+            <p><a href="javascript:void()" class="btn" onclick="getQuote()">Get Quote</button></a>
+
+                <script>
+
+                    function getQuote() {
+                        // Make a GET request to the API
+                        fetch('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
+
+                            .then(response => response.json())
+
+                            .then(data => {
+                                // Update the content of the 'quote' paragraph with the received quote
+
+                                document.getElementById('quote').textContent = data[0];
+
+                            })
+
+                            .catch(error => {
+
+                                console.error('Error fetching quote:', error);
+
+                            });
+
+                    } 
+                </script>
+
+        </footer>
+
+    </section>
+
+    <section class="footer-container">
+
+        <footer class="footer-content">
+
+            <p>&copy; 2023 Woodlign Turning Co. This website is supported by Adam Jeffries</p>
+
+        </footer>
+
+    </section>
+
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
