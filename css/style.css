@@ -26,6 +26,38 @@ body {
 
 /* Layout
 ========================================================================== */
+.banner {
+    white-space: nowrap;
+    overflow: hidden;
+    position:static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(198, 14, 14, 0.877);
+    color: rgb(238, 238, 242);
+    font-size: 24px;
+    text-align: center;
+    animation: marquee 10s linear;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+div.banner {
+    background-color: #901a1a;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  div.banner img {
+    padding: 10px;
+  }
 
 .header-container {
     background: #1b1b27;
@@ -412,7 +444,7 @@ footer {
     .mobile-nav {
         display: none;
     }
-
+   
     ul#navigation {
         list-style: none;
         display: flex;
