@@ -28,23 +28,18 @@
 
       </div>
 
-      <nav class="main-nav">
+      <nav>
 
         <ul id="navigation">
           <li><a href="index.html">About Me</a></li>
-          <li><a href="index.html">Projects</a></li>
+          <li><a href="pens.html">Projects</a></li>
           <li><a href="https://github.com/AdamLJeffries">Contact</a></li>
-          <li><a href="pens.html">Pens</a></li>
+          <li><a href="stock.html">Stock</a></li>
         </ul>
 
       </nav>
 
-      <nav class="mobile-nav">
-
-        <span><a href="#">☰</a></span>
-
-      </nav>
-
+      <span><a onclick="toggleNav()" href="#">☰</a></span>
 
     </header>
 
@@ -63,95 +58,154 @@
     </div>
 
   </section>
-<section class="aboutme-container" id="aboutme">
-  <h2>Products Table</h2>
-  <table class="table table-striped">
+  <section class="aboutme-container" id="aboutme">
+    <h2>Products Table</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Material</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>        
+      </tbody>
+    </table>
+    <img src="/img/IMG_0590.JPG" alt="Profile Photo" class="pens" style="
+    width: 300px;
+    height: 400px;">
+  </section>
 
-    <thead>
-      <tr>
-        <th>Product</th>
-        <th>Material</th>
-        <th>Quantity</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-
-    <tbody>
-  </table>
-
-  <div class="banner">
-    <h3 style="color: green;">
-      How many days are left until Christmas?
-    </h3>
-    <script>
-
-      let today = new Date();
-
-      let christmasYear = today.getFullYear();
-
-
-      if (today.getMonth() == 11 &&
-        today.getDate() > 25) {
-
-
-        christmasYear = christmasYear + 1;
-      }
-
-      let christmasDate =
-        new Date(christmasYear, 11, 25);
-
-
-      let dayMilliseconds =
-        1000 * 60 * 60 * 24;
-
-
-      let remainingDays = Math.ceil(
-        (christmasDate.getTime() - today.getTime()) /
-        (dayMilliseconds)
-      );
-
-
-      document.write("There are " + remainingDays +
-        " days remaining until Christmas. Hire me. It's all I ever wanted.");
-
-    </script>
-  </div>
-</section>
-  <footer class="footer-content">
-
-    <h4>Ron Swanson Quotes</h4>
-
-    <p id="quote"></p>
-
-    <p><a href="javascript:void()" class="btn" onclick="getQuote()">Get Quote</button></a>
-
+  <section class="projects-container" id="projects">
+    <div class="banner">
+      <h3 style="color: green;">
+        How many days are left until Christmas?
+      </h3>
       <script>
 
-        function getQuote() {
-          // Make a GET request to the API
-          fetch('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
+        let today = new Date();
 
-            .then(response => response.json())
+        let christmasYear = today.getFullYear();
 
-            .then(data => {
-              // Update the content of the 'quote' paragraph with the received quote
 
-              document.getElementById('quote').textContent = data[0];
+        if (today.getMonth() == 11 &&
+          today.getDate() > 25) {
 
-            })
 
-            .catch(error => {
+          christmasYear = christmasYear + 1;
+        }
 
-              console.error('Error fetching quote:', error);
+        let christmasDate =
+          new Date(christmasYear, 11, 25);
 
-            });
 
-        } 
+        let dayMilliseconds =
+          1000 * 60 * 60 * 24;
+
+
+        let remainingDays = Math.ceil(
+          (christmasDate.getTime() - today.getTime()) /
+          (dayMilliseconds)
+        );
+
+
+        document.write("There are " + remainingDays +
+          " days remaining until Christmas. Hire me. It's all I ever wanted.");
+
       </script>
+    </div>
 
-  </footer>
+    <section>
+      
+      <div id="myChart" style="max-width: 700px; height:400px"></div>
+
+      <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+      <script>
+        google.charts.load('current', { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Your Function
+        function drawChart() {
+
+        }
+        function drawChart() {
+
+          // Set Data
+          const data = google.visualization.arrayToDataTable([
+            ['Contry', 'Amount of fun measured by Awesome points'],
+            ['Watching woodturning on YouTube', 25],
+            ['Watching me woodturn in person', 30],
+            ['Learning woodturning web development for yourself', 40],
+            ['Thinking about that next project', 25],
+            ['Hiring me for your next project', 100]
+          ]);
+
+          // Set Options
+          const options = {
+            title: 'Ways you can improve your mood and make all of your wildest dreams come true.'
+          };
+
+          // Draw
+          const chart = new google.visualization.BarChart(document.getElementById('myChart'));
+          chart.draw(data, options);
+
+        }
+
+
+
+      </script>
+            <img src="/img/IMG_1970.JPEG" alt="Profile Photo" class="pens" style="
+            width: 200px;
+            height: 400px;">
+      <img src="/img/IMG_1869.JPEG" alt="Profile Photo" class="pens" style="
+      width: 200px;
+      height: 400px;">
+
+
+      <img src="/img/IMG_1868.JPEG" alt="Profile Photo" class="pens" style="
+        width: 125px;
+        height: 400px;">
+
+<img src="/img/IMG_0269.JPEG" alt="Profile Photo" class="pens" style="
+width: 275px;
+height: 400px;">
+    </section>
+    <section class="footer-container">
+    <footer class="footer-content">
+
+      <h4>Ron Swanson Quotes</h4>
+
+      <p id="quote"></p>
+
+      <p><a href="javascript:void()" class="btn" onclick="getQuote()">Get Quote</button></a>
+
+        <script>
+
+          function getQuote() {
+            // Make a GET request to the API
+            fetch('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
+
+              .then(response => response.json())
+
+              .then(data => {
+                // Update the content of the 'quote' paragraph with the received quote
+
+                document.getElementById('quote').textContent = data[0];
+
+              })
+
+              .catch(error => {
+
+                console.error('Error fetching quote:', error);
+
+              });
+
+          } 
+        </script>
+
+    </footer>
 
   </section>
 
@@ -165,7 +219,7 @@
 
   </section>
   <!-- Loop through the products array and populate the table rows -->
-
+  <script src="./js/app.js"></script>
   <script src="./js/stockTableHandler.js"></script>
 
 </body>
