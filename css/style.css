@@ -255,12 +255,15 @@ div.scroll-container {
     font-size: 13px;
     color: #F1F1F1;
     display:grid;
-    grid-template-columns:max-content;
+    grid-template-columns:auto;
     justify-content: center;
     align-items: center;
+    justify-items: center;
+    align-content: center;
     background-color: #1b1b27;
     width: 100%;
     text-align: center;
+    text-wrap: wrap;
     padding: 8px 0;
 }
 
@@ -429,6 +432,8 @@ section p {
     line-height: 1.5;
     color: #F1F1F1;
     font-size: 18px;
+    text-align: center;
+    text-wrap: wrap;
 }
 
 
@@ -447,6 +452,7 @@ section p {
 
 footer {
     text-align: center;
+    text-wrap: wrap;
 }
 
 /* Images and Videos
