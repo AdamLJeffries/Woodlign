@@ -1,5 +1,10 @@
 const nav = document.querySelector('nav');
 
-const toggleNav = () => {
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-};
+toggleNav = () => {
+   
+    if (nav.style.display == 'flex') {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'flex';
+    }
+}
